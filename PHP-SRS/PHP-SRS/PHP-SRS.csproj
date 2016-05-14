@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,22 +50,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddItem.cs">
+    <Compile Include="AddItem.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="frmAddNewItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddItem.Designer.cs">
-      <DependentUpon>AddItem.cs</DependentUpon>
+    <Compile Include="frmAddNewItem.Designer.cs">
+      <DependentUpon>frmAddNewItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateItem.Designer.cs">
+      <DependentUpon>frmUpdateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUseControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUseControl.Designer.cs">
+      <DependentUpon>frmUseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewAllStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewAllStock.Designer.cs">
+      <DependentUpon>frmViewAllStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewStock.Designer.cs">
+      <DependentUpon>frmViewStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockItems.Designer.cs">
+      <DependentUpon>frmStockItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddNewItem.resx">
+      <DependentUpon>frmAddNewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateItem.resx">
+      <DependentUpon>frmUpdateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUseControl.resx">
+      <DependentUpon>frmUseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewAllStock.resx">
+      <DependentUpon>frmViewAllStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewStock.resx">
+      <DependentUpon>frmViewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockItems.resx">
+      <DependentUpon>frmStockItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

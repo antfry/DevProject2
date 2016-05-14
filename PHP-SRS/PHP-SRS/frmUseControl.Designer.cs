@@ -1,6 +1,6 @@
 ﻿namespace PHP_SRS
 {
-    partial class AddItem
+    partial class frmUseControl
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmUseControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "AddItem";
+            this.ClientSize = new System.Drawing.Size(515, 422);
+            this.Name = "frmUseControl";
+            this.Text = "frmUseControl";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

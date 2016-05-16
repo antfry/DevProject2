@@ -58,6 +58,12 @@
     <Compile Include="frmReports.Designer.cs">
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewAllSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewAllSales.Designer.cs">
+      <DependentUpon>frmViewAllSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="frmAddNewItem.cs">
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUseControl.resx">
       <DependentUpon>frmUseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewAllSales.resx">
+      <DependentUpon>frmViewAllSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewAllStock.resx">
       <DependentUpon>frmViewAllStock.cs</DependentUpon>

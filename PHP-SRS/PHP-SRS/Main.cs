@@ -36,7 +36,9 @@ namespace PHP_SRS
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            frmSales m = new frmSales();
+            m.Show();
+            this.Hide();
         }
 
         private void Main_Load(object sender, EventArgs e)

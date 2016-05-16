@@ -21,5 +21,12 @@ namespace PHP_SRS
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmViewAllSales m = new frmViewAllSales();
+            m.Show();
+            this.Hide();
+        }
     }
 }

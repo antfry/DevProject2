@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace PHP_SRS
 {
@@ -36,38 +37,32 @@ namespace PHP_SRS
             DBConnect db = new DBConnect();
             if (db.OpenConnection() == true)
             {
-                var cmd = db.conn.CreateCommand();
+                string selectCommand = "SELECT Name, Quantity FROM StockTable WHERE Name = '" + name + "'";
+                MySqlCommand cmd = new MySqlCommand(selectCommand, db.conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                int newQty = 0;
 
-                  SQLiteDataReader rdr = selectCommand.ExecuteReader();
-            int newQty = 0;
-            cmd.CommandText = "SELECT Name, Quantity FROM StockTable WHERE Name = '" + name + "'";
-            rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    newQty = (int)rdr["Quantity"];
+                }
+
+                if (minusCheck == 0)
+                {
+                    newQty += quantity;
+                }
+                else {
+                    newQty -= quantity;
+                }
+
+                string updateQuery = "UPDATE StockTable SET Quantity = " + newQty + " WHERE Name = '" + name + "'";
+
+                MySqlCommand insertCommand = new MySqlCommand(updateQuery, db.conn);
+
+                insertCommand.ExecuteNonQuery();
 
 
-
-           SQLiteDataReader rdr = selectCommand.ExecuteReader();
-
-
-            while (rdr.Read())
-            {
-                newQty = (int)rdr["Quantity"];
             }
-
-            if (minusCheck == 0)
-            {
-                newQty += quantity;
-            }
-            else {
-                newQty -= quantity;
-            }
-
-            string updateQuery = "UPDATE StockTable SET Quantity = " + newQty + " WHERE Name = '" + name + "'";
-            
-            c
-            SQLiteCommand insertCommand = new SQLiteCommand(updateQuery, php_srsConnection);
-            insertCommand.ExecuteNonQuery();
-
-            php_srsConnection.Close();
         }
 
     }

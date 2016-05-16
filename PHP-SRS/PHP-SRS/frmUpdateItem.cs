@@ -28,5 +28,15 @@ namespace PHP_SRS
             m.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string name = textBox1.ToString();
+
+
+
+            UpdateTableByName(string name, int quantity, int minusCheck)
+        }
     }
 }

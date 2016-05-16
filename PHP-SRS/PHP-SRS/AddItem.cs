@@ -32,5 +32,28 @@ namespace PHP_SRS
         }
 
 
+        public void UpdateTableByName(string name, int quantity, int minusCheck)
+        {
+            DBConnect db = new DBConnect();
+            DBConnect db2 = new DBConnect();
+            int newQty = 0;
+            string selectQuery = "SELECT name, quantity FROM stocktable WHERE name = '" + name + "'";
+
+            db.OpenConnection();
+            db2.OpenConnection();
+
+
+            string updateQuery = "UPDATE stocktable SET quantity = " + quantity + " WHERE name = '" + name + "'";
+
+            MySqlCommand insertCommand = new MySqlCommand(updateQuery, db2.conn);
+            insertCommand.ExecuteNonQuery();
+        }
+
+
+
+
+
+
+
     }
 }

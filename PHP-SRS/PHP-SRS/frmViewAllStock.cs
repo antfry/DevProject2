@@ -15,6 +15,8 @@ namespace PHP_SRS
         public frmViewAllStock()
         {
             InitializeComponent();
+            StockSales st = new StockSales();
+            st.SelectFromTable("SELECT * FROM stocktable", dataGridStock);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,6 +24,11 @@ namespace PHP_SRS
             frmViewStock m = new frmViewStock();
             m.Show();
             this.Close();
+        }
+
+        private void dataGridSales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

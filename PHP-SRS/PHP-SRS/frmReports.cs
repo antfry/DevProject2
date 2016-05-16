@@ -19,19 +19,23 @@ namespace PHP_SRS
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Main m = new Main();
+            m.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             CSV csv = new CSV();
-            csv.CSVStock();
+            csv.CSVStockSales();
+            MessageBox.Show("Sales Record Exported to CSV-StockSales.txt");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             CSV csv = new CSV();
-            csv.CSVSales();
+            csv.CSVStockSales();
+            MessageBox.Show("Sales Record Exported to CSV-StockSales.txt");
         }
 
         private void button3_Click(object sender, EventArgs e)

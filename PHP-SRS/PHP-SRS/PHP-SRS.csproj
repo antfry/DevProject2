@@ -110,6 +110,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockSales.cs" />
     <EmbeddedResource Include="frmAddNewItem.resx">
       <DependentUpon>frmAddNewItem.cs</DependentUpon>
     </EmbeddedResource>

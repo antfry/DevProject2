@@ -20,31 +20,8 @@ namespace PHP_SRS
 
         public void Initialize()
         {
-            string connString = "Server=110.22.83.243;Port=3306;Database=Pharmacy;Uid=root;password=alpine12";
+            string connString = "Server=110.22.83.243;Port=3306;Database=pharmacy;Uid=root;password=alpine12";
             conn = new MySqlConnection(connString);
-        }
-
-        public void Test1()
-        {
-            //Open Connection
-            if (this.OpenConnection() == true)
-            {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = "INSERT INTO stocktable(id,name,quantity,description, attribute, price) VALUES(@name, @quantity, @description, @attribute, @price)";
-                cmd.Parameters.AddWithValue("@id", "4");
-                cmd.Parameters.AddWithValue("@price", "4");
-                cmd.Parameters.AddWithValue("@quantity", "4");
-                cmd.Parameters.AddWithValue("@itemname", "TEST4");
-                // Create command and assign the query and conn from the constructor.
-
-                //Execute Query
-                cmd.ExecuteNonQuery();
-
-
-                //Close Connection
-                this.CloseConnection();
-
-            }
         }
 
 

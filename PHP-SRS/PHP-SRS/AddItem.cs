@@ -18,7 +18,7 @@ namespace PHP_SRS
                 var cmd = db.conn.CreateCommand();
 
 
-                cmd.CommandText = "INSERT INTO StockTable(Name,Description,Attribute,Quantity,Price) VALUES(@name, @description, @price, @attribute, @quantity, @price)";
+                cmd.CommandText = "INSERT INTO stocktable(name,quantity,description,attribute,price) VALUES(@name, @description, @attribute, @quantity, @price)";
 
                 cmd.Parameters.AddWithValue("@price", price);
                 cmd.Parameters.AddWithValue("@quantity", quantity);
@@ -31,39 +31,6 @@ namespace PHP_SRS
             }
         }
 
-
-        public void UpdateTableByName(string name, int quantity, int minusCheck)
-        {
-            DBConnect db = new DBConnect();
-            if (db.OpenConnection() == true)
-            {
-                string selectCommand = "SELECT Name, Quantity FROM StockTable WHERE Name = '" + name + "'";
-                MySqlCommand cmd = new MySqlCommand(selectCommand, db.conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                int newQty = 0;
-
-                while (rdr.Read())
-                {
-                    newQty = (int)rdr["Quantity"];
-                }
-
-                if (minusCheck == 0)
-                {
-                    newQty += quantity;
-                }
-                else {
-                    newQty -= quantity;
-                }
-
-                string updateQuery = "UPDATE StockTable SET Quantity = " + newQty + " WHERE Name = '" + name + "'";
-
-                MySqlCommand insertCommand = new MySqlCommand(updateQuery, db.conn);
-
-                insertCommand.ExecuteNonQuery();
-
-
-            }
-        }
 
     }
 }

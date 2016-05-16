@@ -22,6 +22,7 @@ namespace PHP_SRS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
+            
         }
     }
 }

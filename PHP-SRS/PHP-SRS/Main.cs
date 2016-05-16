@@ -43,5 +43,11 @@ namespace PHP_SRS
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Report r = new Report();
+            r.SalesReport();
+        }
     }
 }

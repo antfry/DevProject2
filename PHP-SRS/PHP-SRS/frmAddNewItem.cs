@@ -31,7 +31,7 @@ namespace PHP_SRS
             string attribute;
             int quantity;
             double price;
-            name = textBox1.ToString();
+            name = textBox1.Text.ToString();
             description = textBox2.ToString();
             attribute = "TEST";
             quantity = Convert.ToInt32(textBox3.Text);

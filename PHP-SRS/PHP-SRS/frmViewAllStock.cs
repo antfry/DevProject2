@@ -21,7 +21,7 @@ namespace PHP_SRS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmViewStock m = new frmViewStock();
+            frmStockItems m = new frmStockItems();
             m.Show();
             this.Close();
         }

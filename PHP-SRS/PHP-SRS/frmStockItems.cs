@@ -48,7 +48,7 @@ namespace PHP_SRS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmViewStock m = new frmViewStock();
+            frmViewAllStock m = new frmViewAllStock();
             m.Show();
             this.Hide();
         }

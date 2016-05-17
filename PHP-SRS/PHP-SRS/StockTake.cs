@@ -57,9 +57,93 @@ namespace PHP_SRS
 
 
 
+        public string GetName(string id)
+        {
+            DBConnect db = new DBConnect();
+            AddItem ai = new AddItem();
+
+            string selectQuery = "SELECT Name FROM stocktable WHERE ID = " + id;
+            string name = "";
+
+            db.OpenConnection(); //Opens the connection
 
 
+            MySqlCommand selectCommand = new MySqlCommand(selectQuery, db.conn);
+            MySqlDataReader readResults = selectCommand.ExecuteReader();
 
+            while (readResults.Read())
+            {
+                name = "" + readResults["name"];
+            }
+
+            db.CloseConnection();
+
+            return name;
+        }
+
+        public double GetPrice(string id)
+        {
+            DBConnect db = new DBConnect();
+            AddItem ai = new AddItem();
+            string selectQuery = "SELECT Price FROM stocktable WHERE ID = " + id;
+            double price = 0;
+
+            db.OpenConnection();    
+
+            MySqlCommand selectCommand = new MySqlCommand(selectQuery, db.conn);
+            MySqlDataReader readResults = selectCommand.ExecuteReader();
+
+            while (readResults.Read())
+            {
+                price = (double)readResults["price"];
+            }
+            return price;
+
+        }
+
+        public int GetQuantity(string id)
+        {
+            DBConnect db = new DBConnect();
+            AddItem ai = new AddItem();
+            string selectQuery = "SELECT Quantity FROM StockTable WHERE ID = " + id;
+            int quantity = 0;
+
+            db.OpenConnection(); //Opens the connection           
+            MySqlCommand selectCommand = new MySqlCommand(selectQuery, db.conn);
+            MySqlDataReader readResults = selectCommand.ExecuteReader();
+
+            while (readResults.Read())
+            {
+                quantity = (int)readResults["quantity"];
+            }
+
+            db.CloseConnection();
+
+            return quantity;
+        }
+
+        public List<string> GetItemRows(string selectQuery)
+        {
+            DBConnect db = new DBConnect();
+
+            List<string> results = new List<string>();
+
+            db.OpenConnection();
+
+            AddItem ai = new AddItem();
+
+            MySqlCommand selectCommand = new MySqlCommand(selectQuery, db.conn);
+            MySqlDataReader readResults = selectCommand.ExecuteReader();
+
+            while (readResults.Read())
+            {
+                results.Add("Item: " + readResults["Name"] + ", Quantity: " + readResults["Quantity"] + ", Price: " + readResults["Price"]);
+            }
+
+            db.CloseConnection();
+
+            return results;
+        }
 
 
 

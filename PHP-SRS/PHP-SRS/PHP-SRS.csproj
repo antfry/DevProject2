@@ -51,7 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddItem.cs" />
+    <Compile Include="AddSalesRecords.cs" />
     <Compile Include="CSV.cs" />
+    <Compile Include="frmCreateSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateSale.Designer.cs">
+      <DependentUpon>frmCreateSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +127,9 @@
     <Compile Include="StockTake.cs" />
     <EmbeddedResource Include="frmAddNewItem.resx">
       <DependentUpon>frmAddNewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateSale.resx">
+      <DependentUpon>frmCreateSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>

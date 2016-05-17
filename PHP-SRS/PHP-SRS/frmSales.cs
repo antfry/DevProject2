@@ -19,7 +19,9 @@ namespace PHP_SRS
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Main m = new Main();
+            m.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -31,7 +33,9 @@ namespace PHP_SRS
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmCreateSale m = new frmCreateSale();
+            m.Show();
+            this.Hide();
         }
     }
 }

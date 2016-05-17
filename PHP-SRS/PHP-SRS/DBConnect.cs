@@ -51,7 +51,7 @@ namespace PHP_SRS
             }
         }
 
-        private bool CloseConnection()
+        public bool CloseConnection()
         {
             try
             {

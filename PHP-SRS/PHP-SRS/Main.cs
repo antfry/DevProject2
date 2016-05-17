@@ -15,6 +15,41 @@ namespace PHP_SRS
         public Main()
         {
             InitializeComponent();
+
+
+
+
+            StockTake st = new StockTake();
+            List<string> rows = st.GetNameRows("SELECT * FROM stocktable");
+
+            textBox1.Text = "";
+
+            int quantity;
+            string name;
+
+            if (rows.Count() == 0)
+            {
+                textBox1.Text = "There are no critical items.";
+            }
+
+            for (int i = 0; i < rows.Count(); i++)
+            {
+                name = st.GetName("" + (i + 1));
+                quantity = st.GetQuantity("" + (i + 1));
+
+                if (quantity < 50)
+                {
+                    textBox1.Text += name + " only has " + quantity + " items in stock!\n";
+                }
+            }
+
+
+
+
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +86,11 @@ namespace PHP_SRS
             frmReports m = new frmReports();
             m.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

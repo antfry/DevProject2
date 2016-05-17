@@ -29,13 +29,12 @@ namespace PHP_SRS
             string name;
             string description;
             string attribute;
-            int quantity;
+            string quantity;
             double price;
             name = textBox1.Text.ToString();
-            description = textBox2.ToString();
+            description = textBox2.Text.ToString();
             attribute = "TEST";
-            quantity = Convert.ToInt32(textBox3.Text);
-            quantity = int.Parse(textBox3.Text);
+            quantity = textBox3.Text.ToString(); ;
             price = Convert.ToDouble(textBox5.Text);
             price = double.Parse(textBox5.Text);
 

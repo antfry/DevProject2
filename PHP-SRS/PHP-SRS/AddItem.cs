@@ -10,7 +10,7 @@ namespace PHP_SRS
 {
     class AddItem
     {
-        public void InsertIntoTable(string name, string description, string attribute, int quantity, double price)
+        public void InsertIntoTable(string name, string description, string attribute, string quantity, double price)
         {
             DBConnect db = new DBConnect();
             if (db.OpenConnection() == true)
@@ -18,7 +18,7 @@ namespace PHP_SRS
                 var cmd = db.conn.CreateCommand();
 
 
-                cmd.CommandText = "INSERT INTO stocktable(name,quantity,description,attribute,price) VALUES(@name, @description, @attribute, @quantity, @price)";
+                cmd.CommandText = "INSERT INTO stocktable(name,quantity,description,attribute,price) VALUES(@name, @quantity, @description, @attribute, @price)";
 
                 cmd.Parameters.AddWithValue("@price", price);
                 cmd.Parameters.AddWithValue("@quantity", quantity);

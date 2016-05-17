@@ -105,7 +105,7 @@ namespace PHP_SRS
         {
             DBConnect db = new DBConnect();
             AddItem ai = new AddItem();
-            string selectQuery = "SELECT Quantity FROM StockTable WHERE ID = " + id;
+            string selectQuery = "SELECT quantity FROM stocktable WHERE ID = " + id;
             int quantity = 0;
 
             db.OpenConnection(); //Opens the connection           

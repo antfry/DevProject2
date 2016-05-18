@@ -33,11 +33,6 @@ namespace PHP_SRS
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             frmUpdateItem m = new frmUpdateItem();

@@ -10,33 +10,30 @@ using System.Windows.Forms;
 
 namespace PHP_SRS
 {
-    public partial class frmSales : Form
+    public partial class frmViewSales : Form
     {
-        public frmSales()
+        public frmViewSales()
         {
             InitializeComponent();
         }
 
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            frmMakeSale m = new frmMakeSale();
-            m.Show();
-            this.Hide();
+
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            frmSales m = new frmSales();
             m.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Main m = new Main();
+            frmViewAllSales m = new frmViewAllSales();
             m.Show();
-
-            this.Close();
+            this.Hide();
         }
     }
 }

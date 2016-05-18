@@ -17,6 +17,11 @@ namespace PHP_SRS
             InitializeComponent();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             frmStockItems m = new frmStockItems();
@@ -24,10 +29,6 @@ namespace PHP_SRS
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -36,10 +37,18 @@ namespace PHP_SRS
 
         private void button3_Click(object sender, EventArgs e)
         {
+            frmSales m = new frmSales();
+            m.Show();
+            this.Hide();
+        }
+
+
+        private void Main_Load(object sender, EventArgs e)
+        {
 
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
 
         }

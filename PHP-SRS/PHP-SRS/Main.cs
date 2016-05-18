@@ -29,7 +29,7 @@ namespace PHP_SRS
 
             if (rows.Count() == 0)
             {
-                textBox1.Text = "There are no critical items.";
+                textBox1.Text = "There are no critical items.\n";
             }
 
             for (int i = 0; i < rows.Count(); i++)
@@ -39,7 +39,7 @@ namespace PHP_SRS
 
                 if (quantity < 50)
                 {
-                    textBox1.Text += name + " only has " + quantity + " items in stock!\n";
+                    textBox1.Text += name + " only has " + quantity + " items in stock!" + "\n";
                 }
             }
 

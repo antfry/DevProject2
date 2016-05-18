@@ -1,0 +1,2 @@
+INSERT INTO `stocktable` (`id`, `name`, `quantity`, `description`, `attribute`, `price`) VALUES ('1', 'Panadol', '50', 'Panadol', '', '30');
+INSERT INTO `stocktable` (`id`, `name`, `quantity`, `description`, `attribute`, `price`) VALUES ('2', 'Panadol', '20', 'Nerofen', '', '30');

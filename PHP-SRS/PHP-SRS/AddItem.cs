@@ -41,7 +41,7 @@ namespace PHP_SRS
             db.OpenConnection();
             db2.OpenConnection();
 
-
+            //change to id
             string updateQuery = "UPDATE stocktable SET quantity = " + quantity + " WHERE name = '" + name + "'";
 
             MySqlCommand insertCommand = new MySqlCommand(updateQuery, db2.conn);
